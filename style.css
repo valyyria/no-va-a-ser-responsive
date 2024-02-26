@@ -1,0 +1,428 @@
+/* Black fond */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: inherit;
+    margin: 0;
+}
+
+div {
+    display: block;
+}
+
+@keyframes glitch {
+    0%,
+    40%,
+    44%,
+    58%,
+    61%,
+    65%, 
+    69%,
+    72%,
+    100% {
+        transform: skewX(0);
+    }
+    41% {
+        transform: skewX(10deg);
+    }
+    42% {
+        transform: skewX(-10deg);
+    }
+    59% {
+        transform: skewX(30deg) skewY(10deg);
+    }
+    60% {
+        transform: skewX(-20deg) skewY(-5deg);
+    }
+    63% {
+        transform: skewX(10deg) skewY(-5deg);
+    }
+    70% {
+        transform: skewX(-25deg) skewY(-2deg);
+    }
+    71% {
+        transform: skewX(10deg) skewY(-8deg);
+    }
+}
+
+@keyframes neon-lights {
+    0% {
+      text-shadow: 0 0 0 #fff, 0 0 10px #f980ff; /* Pink */
+    }
+    33% {
+      text-shadow: 0 0 0 #fff, 0 0 10px #40ffff; /* Cyan */
+    }
+    66% {
+      text-shadow: 0 0 0 #fff, 0 0 10px #ffff33; /* Yellow */
+    }
+    100% {
+      text-shadow: 0 0 0 #fff, 0 0 10px #f980ff; /* Pink */
+    }
+}  
+
+h1 {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+
+    color: #FCEE09;
+    text-shadow: 0 0 0 #fff, 0 0 10px #ffff33;
+    animation: glitch 1s infinite alternate;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mb-4 {
+    margin-bottom: 0.5rem;
+}
+
+#sugerencias-container{
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+}
+  
+@media (min-width: 768px) {
+    h1 {
+      font-size: 5rem;
+    }
+}
+
+.max-h-32 {
+    max-height: 8rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.bg-blue-900 { /* says 'blue' but its gonna be black (almost) */
+    --tw-bg-opacity: 1;
+    background-color: rgba(5, 10, 14, var(--tw-bg-opacity));
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Container */
+
+.shadow-md {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.bg-white {
+    --tw-bg-opacity: 1; /* No t white */
+    background-color: rgba(18, 23, 28, var(--tw-bg-opacity)); /* grey */
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+}
+
+.max-w-screen-md {
+    max-width: 768px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    width: 100%;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.gap-1 {
+    gap: 0.15rem;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+/* Table */
+input {
+    border-width: 2px;
+    border-style: dashed;
+}
+
+.bg-gray-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(250, 250, 250, var(--tw-bg-opacity));
+}
+
+/*
+Commented because as I wanted my style, I dont have to use these
+.border-black {
+    --tw-border-opacity: 1;
+    border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+}
+
+.border-l-2 {
+    border-left-width: 2px;
+}
+
+.border-r-2 {
+    border-right-width: 2px;
+}
+
+.border-t-2 {
+    border-top-width: 2px;
+}
+
+.border-b-2 {
+    border-bottom-width: 2px;
+}
+*/
+
+.items-center {
+    align-items: center;
+}
+
+.w-12 {
+    width: 3rem;
+}
+
+.h-12 {
+    height: 3rem;
+}
+
+/* Bottom */
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+/*
+Commented because it was giving me problems
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+*/
+
+.hidden {
+    display: none;
+}
+
+.duration-200 {
+    transition-duration: .2s;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    transition-duration: 150ms;
+}
+
+.text-white {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-size: large;
+    font-weight: lighter;
+    font-style: normal;
+    --tw-text-opacity: 1;
+    color: rgba(18, 23, 28, var(--tw-text-opacity));
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*.rounded {
+    border-radius: 0.25rem;
+}*/
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.block {
+    display: block;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.max-h-48 {
+    max-height: 12rem;
+}
+
+.sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+}
+
+.bg-blue-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(0, 255, 255, var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 0, 60, var(--tw-bg-opacity));
+}
+
+.bg-green-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(50, 255, 50, var(--tw-bg-opacity));
+}
+
+.bg-purple-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(204, 0, 204, var(--tw-bg-opacity));
+}
+
+.bg-gray-500 {
+    --tw-bg-opacity: 1; /* Pink */
+    background-color: rgba(255, 102, 204, var(--tw-bg-opacity));
+}
+
+.border {
+    border-width: 1px;
+    border-color: white;
+}
+
+.max-h-48 {
+    max-height: 12rem;
+}
+
+/* History */
+.min-w-full {
+    min-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    text-indent: 0;
+    border-color: inherit;
+}
+
+.bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(5, 10, 14, var(--tw-bg-opacity));
+}
+
+.text-gray-500 {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-size: large;
+    font-weight: lighter;
+    font-style: normal;
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.tracking-wider {
+    letter-spacing: .05em;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-xs {
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+tr {
+    font-family: "Teko", sans-serif;
+    font-weight: lighter;
+    color: white;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.divide-gray-200>:not([hidden])~:not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgba(229, 231, 235, var(--tw-divide-opacity));
+}
+
+.divide-y>:not([hidden])~:not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(1px* calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(1px* var(--tw-divide-y-reverse));
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Board</title>
+  <link href="style.css" rel="stylesheet">
+  <style>
+    /* Additional styles for responsiveness */
+    @media (max-width: 768px) {
+      #sudoku-board {
+        grid-template-columns: repeat(9, minmax(20px, 1fr));
+      }
+
+      .grid-cols-1 {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .sm\:col-span-2 {
+        grid-column: span 2 / span 2;
+      }
+
+      .lg\:col-span-3 {
+        grid-column: span 3 / span 3;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-blue-900 flex items-center justify-center h-screen">
+
+  <div class="container mx-auto bg-white p-6 rounded-md shadow-md max-w-screen-md">
+    <h1 class="text-2xl font-bold mb-4">The Sudoku Board</h1>
+
+    <div id="sugerencias-container" class="mt-2 max-h-32 overflow-y-auto"></div>
+
+    <div id="sudoku-board" class="grid grid-cols-9 gap-1">
+      <!-- My Sudoku Board -->
+    </div>
+
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <input type="file" id="file-input" class="hidden" accept=".txt, .csv">
+        <label for="file-input" class="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-200 block text-center">
+          Choose File
+        </label>
+      </div>
+      <div>
+        <button onclick="loadFile()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-200 w-full">Load File</button>
+      </div>
+      <div>
+        <button onclick="solveSudoku()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-200 w-full">Solve Sudoku</button>
+      </div>
+      <div>
+        <button onclick="deshacer3()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition-all duration-200 w-full">Undo</button>
+      </div>
+      <div>
+        <button onclick="rehacer3()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition-all duration-200 w-full">Redo</button>
+      </div>
+      <div>
+        <button onclick="exportSudokuAsText()" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-all duration-200 w-full">Print Sudoku</button>
+      </div>
+      <div class="sm:col-span-2 lg:col-span-3">
+        <button onclick="showHistorial()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-all duration-200 w-full">History</button>
+      </div>
+    </div>
+
+    <div id="historial-container" class="mt-4 max-h-48 overflow-y-auto border p-4">
+      <!-- Your historical content here -->
+    </div>
+
+  </div>
+
+  <script src="cola.js"></script>
+  <script src="listaDoblementeEnlazada.js"></script>
+  <script src="pila.js"></script>
+  <script src="tablaHash.js"></script>
+  <script src="sudoku.js"></script>
+  <script>
+    function imprimirSudoku() {
+      window.print();
+    }
+  </script>
+</body>
+
+</html>
